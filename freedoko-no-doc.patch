@@ -1,0 +1,27 @@
+Index: FreeDoko/Makefile
+===================================================================
+--- FreeDoko.orig/Makefile
++++ FreeDoko/Makefile
+@@ -330,16 +330,16 @@ install : check_install
+ 	echo "Kopiere die Dokumentation"
+ 	mkdir -p $(DESTDIR)$(HELP_DIRECTORY)
+ 	cp AUTHORS COPYING ChangeLog $(DESTDIR)$(HELP_DIRECTORY)/
+-	$(MAKE) -C doc install
++#	$(MAKE) -C doc install
+ 	$(MAKE) -C manual install
+ #	update the manual page
+ 	echo "Aktualisiere die man-Page"
+-	a2x -f manpage doc/freedoko.adoc
++#	a2x -f manpage doc/freedoko.adoc
+ 	mkdir -p $(DESTDIR)$(MAN_DIRECTORY)
+-	cp doc/freedoko.6 $(DESTDIR)$(MAN_DIRECTORY)/
+-	-chgrp games $(DESTDIR)$(MAN_DIRECTORY)/freedoko.6
+-	chmod 640 $(DESTDIR)$(MAN_DIRECTORY)/freedoko.6
+-	cd $(DESTDIR)$(MAN_DIRECTORY)/ && ln -sf freedoko.6 FreeDoko.6
++#	cp doc/freedoko.6 $(DESTDIR)$(MAN_DIRECTORY)/
++#	-chgrp games $(DESTDIR)$(MAN_DIRECTORY)/freedoko.6
++#	chmod 640 $(DESTDIR)$(MAN_DIRECTORY)/freedoko.6
++#	cd $(DESTDIR)$(MAN_DIRECTORY)/ && ln -sf freedoko.6 FreeDoko.6
+ #	copy the icon
+ 	echo "Kopiere das Icon"
+ 	mkdir -p $(DESTDIR)$(ICON_DIRECTORY)

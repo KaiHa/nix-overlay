@@ -1,0 +1,18 @@
+Index: FreeDoko/Makefile.install.directories
+===================================================================
+--- FreeDoko.orig/Makefile.install.directories
++++ FreeDoko/Makefile.install.directories
+@@ -4,9 +4,10 @@
+ # the different directories for the files
+ 
+ # installing in /usr/local
+-MAIN_DIRECTORY         = /usr/local
+-BIN_DIRECTORY          = $(MAIN_DIRECTORY)/games
+-DATA_DIRECTORY         = $(MAIN_DIRECTORY)/share/games/FreeDoko
++PREFIX                ?= /usr
++MAIN_DIRECTORY         = $(PREFIX)
++BIN_DIRECTORY          = $(MAIN_DIRECTORY)/bin
++DATA_DIRECTORY         = $(MAIN_DIRECTORY)/share/FreeDoko
+ HELP_DIRECTORY         = $(MAIN_DIRECTORY)/share/doc/FreeDoko
+ MAN_DIRECTORY          = $(MAIN_DIRECTORY)/share/man/man6
+ ICON_DIRECTORY         = $(MAIN_DIRECTORY)/share/pixmaps
